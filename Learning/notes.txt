@@ -1,0 +1,2 @@
+-> document.querySelector(".gNO89b").click(); => To click the id's directly
+

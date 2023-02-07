@@ -1,0 +1,16 @@
+-> 1995 Netscape Navigator Browser thinks we need a programming language which can add interaction to website
+-> Brendan Eich created javaScript in 10 days only
+-> First name was mocha after it changed to LiveScript but it was not getting popular on that time java was a 
+   a popular language then java was added in live and javaScript was named
+-> Internet Explorer was also a popular browser in 1996 and Netscape Navigator was using javaScript and Internet 
+   Explorer copy some feature and add some new feature and created jScript language
+-> javascript has gone to ECMA(International is an industry association dedicated to the standardization of information and communication systems) 
+-> 1997: ES1
+-> 2009: ES5 (lots of new features)
+-> 2015: ES6/ES2015 (Biggest update in the history of js)
+-> javaScript has a community named TC39 (Technical community 39)
+-> 2016: ES7/ES2016
+-> 2017: ES8/ES2017
+-> javaScript is backward compatible (those feature was working 20 years later will work now)
+-> javascript is not forward compatible (if now i launch a new feature and use same feature after 5 years with same older version browser it will not work)
+   (Tools: Babel Transfixes ES6 to ES1)
