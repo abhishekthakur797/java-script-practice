@@ -1,7 +1,7 @@
 "use strict"; // treat all js code as newer version
 
 //! Primitive datatype :: call by value :: vales gets copied
-// Number, String , Boolean, null, undefined, symbol, symbol.
+// Number, String , Boolean, null, undefined, symbol.
 
 let name = "Carl"; // String
 let age = 24; // number
