@@ -3,7 +3,7 @@
 //! String to Number
 let score = "56";
 let valueInNumber = Number(score);
-console.log(typeof score, score);
+console.log(typeof score, score); // Output :: Number 33
 
 // can we convert a string where the value is mixed with numbers and strings?
 let score2 = "43abc";
@@ -41,4 +41,4 @@ console.log("-----------------------------");
 //! Number to string
 let number = 5;
 let NumberToString = String(number);
-console.log(typeof NumberToString,NumberToString ); // Output :: string 5
+console.log(typeof NumberToString, NumberToString); // Output :: string 5
