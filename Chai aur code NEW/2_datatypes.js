@@ -1,9 +1,10 @@
 //! Video No :: 5 :: Datatypes
+//! Vide No :: 9 :: Datatypes interview perspective.
 
 "use strict"; // treat all js code as newer versions
 
 //! Primitive Datatype :: call by value :: values gets copied.
-//  Number, String , Boolean , null , undefined, symbol.
+//  Number, String , Boolean , null , undefined, symbol, BigInt.
 
 let name = "Carl"; // String
 let age = 24; // number
@@ -30,3 +31,18 @@ let myDetails = {
   idNo: 43,
 };
 console.log(typeof myDetails, myDetails);
+console.log("______________________");
+
+//! Video 9 :: Datatypes
+// Datatypes are mainly of two types primitive and non primitive these are categorized on the basis of how data is stored in memory and how it can be accessed.
+//? Javascript is a dynamically type language or static type language :: dynamically.
+//? variable is determined at run time, not at compile time, this allows you to assign value of types to the same variable.
+//? you don't have to define int,float,sting.... Javascript automatically detects the variable type.
+
+//! Function stored in a variable
+
+const myFunction = function () {
+  console.log("This is a function");
+};
+
+console.log(typeof myFunction); // The type of function is not function, but object function
