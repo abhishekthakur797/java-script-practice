@@ -42,3 +42,15 @@ console.log("-----------------------------");
 let number = 5;
 let NumberToString = String(number);
 console.log(typeof NumberToString, NumberToString); // Output :: string 5
+
+//! Number to negative value
+let value = 4;
+let negValue = -value;
+console.log(negValue);
+
+//! Prefix and Postfix operator
+let counter = 199;
+counter++;
+console.log("Postfix value " + counter);
+++counter;
+console.log("Prefix value " + counter);
