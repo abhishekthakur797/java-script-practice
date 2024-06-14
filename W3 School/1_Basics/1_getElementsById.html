@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+
+        button {
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--! JavaScript can change HTML content -->
+    <!--Show Dates in JavaScript-->
+
+    <button type="button" onclick="document.getElementById('demo').innerHTML=Date()">
+        Click here to display date and time
+    </button>
+    <p id="demo"></p>
+
+    <!--Change Content-->
+
+    <p id="demo2">JavaScript can change HTML content</p>
+    <button type="button" onclick="document.getElementById('demo2').innerHTML='Here is the new sentence'">
+        Click Here to change upper content
+    </button>
+
+    <!--Changes HTML styles-->
+    <p id="demo3">JavaScript can change HTML styles</p>
+    <button type="button" onclick="document.getElementById('demo3').style.fontSize='30px'">
+        click here to change the font size
+    </button>
+    <button type="button" onclick="document.getElementById('demo3').style.color='red'">
+        click here to change the font color
+    </button>
+    <button type="button" onclick="document.getElementById('demo3').style.display='none'">
+        click here to Hide the Element
+    </button>
+    <button type="button" onclick="document.getElementById('demo3').style.display='block'">
+        click here to Show the Element
+    </button>
+</body>
+
+</html>
