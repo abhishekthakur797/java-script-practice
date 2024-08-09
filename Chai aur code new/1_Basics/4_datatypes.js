@@ -1,4 +1,5 @@
 //* VIDEO 5: Datatypes and ECMA Standards.
+//* VIDEO 8: Datatypes of javascript summary.
 
 // ECMA:European computer manufactures associations.
 // ECMAScript 1 (1997) first edition.
@@ -16,6 +17,7 @@ let isLoggedIn = true; // Boolean Datatype
 let temperature = null; // Standalone value(no value) when we have send nothing we null instead of values.
 let whatNext; // undefined
 const id = Symbol("23"); // Symbol(uniqueness)
+const bigNumber = 2283838383838002992922n; // BigInt
 
 //* To check the datatype and value
 console.log(typeof id, id);
@@ -33,3 +35,10 @@ let myData = {
   yearId: 2023,
 };
 console.log(typeof myData, myData);
+
+/// function
+const myFunction = function () {
+  console.log("Hello Abhishek");
+};
+
+console.log(typeof myFunction, myFunction);

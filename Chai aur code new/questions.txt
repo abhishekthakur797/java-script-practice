@@ -1,1 +1,2 @@
 -> why null type is defined as object?
+-> Javascript is dynamically typed statically type language?
