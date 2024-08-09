@@ -6,6 +6,7 @@ const name = "Abhishek";
 const age = 25;
 console.log("My name is " + name + " and my age is " + age); // Hard and old one
 console.log(`My Name is ${name} and my age is ${age}`); // Easy and modern (string interpolation using placeholder)
+console.log("------------------------------------");
 
 //! New ways to describe string with object
 //! Methods in strings
