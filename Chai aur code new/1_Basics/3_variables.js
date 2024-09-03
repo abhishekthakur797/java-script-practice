@@ -19,3 +19,4 @@ accountCity = "Darbhanga";
 console.table([accountUserId, accountEmail, accountPwd, accountCity]);
 
 //! Notes - Prefer not to use var because of issue of block and functional scope.
+// 'let' is preferred over 'var' because 'let' is block-scoped (restricted within {}) and 'var' is function-scoped (accessible outside the block).

@@ -4,16 +4,19 @@
 let score = "56";
 let valueInNumber = Number(score);
 console.log(typeof valueInNumber, valueInNumber); // number 56
+console.log("--------------------------");
 
 // Mixed String to Number (contains non-numeric characters)
 let score2 = "45abc";
 let valueInNumber2 = Number(score2);
 console.log(typeof valueInNumber2, valueInNumber2); // number NaN
+console.log("--------------------------");
 
 // Non-numeric String to Number
 let name = "Abhishek";
 let nameInNumber = Number(name);
 console.log(typeof nameInNumber, nameInNumber); // number NaN
+console.log("--------------------------");
 
 // Primitive Data Types to Number
 let score3 = null;
@@ -24,6 +27,7 @@ console.log(typeof Number(score4), Number(score4)); // number NaN
 
 let score5 = true;
 console.log(typeof Number(score5), Number(score5)); // number 1
+console.log("--------------------------");
 
 // Number to Boolean
 let answer = 1;

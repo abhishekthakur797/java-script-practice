@@ -21,6 +21,7 @@ const bigNumber = 2283838383838002992922n; // BigInt
 
 //* To check the datatype and value
 console.log(typeof id, id);
+console.log("--------------------------");
 
 // Non Primitive Datatypes: Call by reference
 // Object, Arrays, Functions.
@@ -35,6 +36,7 @@ let myData = {
   yearId: 2023,
 };
 console.log(typeof myData, myData);
+console.log("--------------------------");
 
 /// function
 const myFunction = function () {
