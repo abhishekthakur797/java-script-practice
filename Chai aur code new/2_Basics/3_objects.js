@@ -1,4 +1,4 @@
-// 16: Objects in JavaScript
+//* 16: Objects in JavaScript
 // DOM and Objects are very important in JavaScript.
 
 // Object can be declared in two ways: literal and constructor.
