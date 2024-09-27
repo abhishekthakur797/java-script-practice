@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Changer</title>
+    <style>
+      body {
+        text-align: center;
+        margin-top: 50px;
+        font-family: Arial, sans-serif;
+      }
+      .color-button {
+        padding: 15px 30px;
+        margin: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        color: white;
+        border-radius: 12px; /* Rounded corners */
+        border: 2px solid black; /* Added 2px black border */
+      }
+      .red {
+        background-color: red;
+      }
+      .blue {
+        background-color: blue;
+      }
+      .green {
+        background-color: green;
+      }
+      .yellow {
+        background-color: yellow;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Click a button to change background color</h1>
+
+    <button class="color-button red" onclick="changeColor('red')">Red</button>
+    <button class="color-button blue" onclick="changeColor('blue')">
+      Blue
+    </button>
+    <button class="color-button green" onclick="changeColor('green')">
+      Green
+    </button>
+    <button class="color-button yellow" onclick="changeColor('yellow')">
+      Yellow
+    </button>
+
+    <script>
+      function changeColor(color) {
+        document.body.style.backgroundColor = color;
+      }
+    </script>
+  </body>
+</html>

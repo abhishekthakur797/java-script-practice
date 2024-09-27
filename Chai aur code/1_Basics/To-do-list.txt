@@ -1,3 +1,0 @@
-[]Learn about prefix and postfix from MDN web docs
-//? Javascript is a dynamically type language or static type language
-[] Symbol Datatype

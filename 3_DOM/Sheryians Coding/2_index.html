@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <h1 class="main-class" id="main-id">Welcome to DOM Manipulation</h1>
+  </body>
+  <!--! Script -->
+  <script>
+    // Selection of an Element(There is querySelectorAll in which all element with same id,class,tag is selected.)
+    // querySelectorAll it will give it in node list. we have to use for each loop to execute it.
+    const h1Element = document.querySelector("h1"); // Selection Element
+    const h1Class = document.querySelector(".main-class"); // Section of class.
+    const h1Id = document.querySelector("#main-id"); // selection of ID.
+    console.log("Element Selection: ", h1Element);
+    console.log("Class Selection:", h1Class);
+    console.log("ID Selection: ", h1Id);
+
+    // Changing HTML, there is also innerContent (in which if any thing is hide it will show)- innerHTML and innerContent is similar.
+    // innerHTML: Allows changing both text and HTML tags within an element.
+    // innerText: Only allows changing the text content of an element, ignoring any HTML tags.
+    // textContent: Affects all content within an element, including hidden elements, while ignoring HTML tags.
+    h1Element.innerHTML = "Welcome to TypeScript"; // or directly document.querySelector("h1").innerHTML= "HTML";
+
+    // Changing CSS.
+    h1Element.style.backgroundColor = "Green";
+    h1Element.style.color = "White";
+    h1Element.style.padding = "10px";
+
+    // Event Listener
+    // Click Function
+    h1Element.addEventListener("click", function () {
+      console.log("hey i think you have just clicked and changed the color");
+      h1Element.style.color = "black";
+      h1Element.style.backgroundColor = "yellow";
+    });
+  </script>
+</html>

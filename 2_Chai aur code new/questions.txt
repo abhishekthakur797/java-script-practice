@@ -2,3 +2,4 @@
 -> Javascript is dynamically typed statically type language?
 -> Video no 25 later video : how does Javascript execute code.
 -> Video no 30 later : filter map and reduce.
+-> Video no 34 : Re-watch the video
