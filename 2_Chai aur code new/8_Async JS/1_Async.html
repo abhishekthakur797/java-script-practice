@@ -1,0 +1,47 @@
+<!--! VIDEO NO 38 : 2 projects with Async JS -->
+<!--! setTimeOut and clearTimeout -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Javascript</title>
+  </head>
+  <body style="background-color: black; color: white">
+    <h1 style="background-color: #f7e018; color: black; padding: 5px">
+      Welcome to Javascript
+    </h1>
+    <button id="stop">Stop</button>
+
+    <!--! script -->
+    <script>
+      // set Time out - Schedules a piece of code to run after a specified delay (in milliseconds).
+      setTimeout(() => {
+        console.log("Set Time out executed after 1 sec executed.");
+      }, 1000);
+
+      // it can be executed directly using a variable function.
+      const sayName = () => {
+        console.log("Abhishek :: 2sec");
+      };
+      setTimeout(sayName, 2000);
+
+      // changing html and css at a certain time.
+      const heading = document.querySelector("h1");
+      const changeTextCSS = () => {
+        heading.innerHTML = "Welcome to TypeScript";
+        heading.style.backgroundColor = "#0b7ece";
+        heading.style.color = "white";
+        console.log("HTML and CSS change after 3 sec using setTimeOut");
+      };
+      const changeMe = setTimeout(changeTextCSS, 3000);
+
+      // clearTimeout - Cancels the scheduled execution if called before the timeout completes.
+      document.querySelector("#stop").addEventListener("click", function () {
+        clearTimeout(changeMe);
+        console.log("Stop Button clicked.");
+      });
+    </script>
+  </body>
+</html>

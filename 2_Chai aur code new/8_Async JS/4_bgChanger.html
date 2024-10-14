@@ -1,0 +1,46 @@
+<!--! VIDEO NO 38 : 2 projects with Async JS -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Changer</title>
+  </head>
+  <body style="background-color: black; color: white">
+    <h3>Click start to change the background-color every second</h3>
+    <button id="start">START</button>
+    <button id="stop">STOP</button>
+
+    <!--! Script of the page -->
+    <script>
+      const body = document.querySelector("body");
+      const start = document.querySelector("#start");
+      const stop = document.querySelector("#stop");
+      let intervalId;
+
+      // Random Color Generator.
+      let randomColorGenerator = function () {
+        const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random() * 256);
+        const b = Math.floor(Math.random() * 256);
+        return `rgb(${r},${g},${b})`;
+      };
+
+      // Start Button Event Listener.
+      start.addEventListener("click", function () {
+        if (!intervalId) {
+          intervalId = setInterval(function () {
+            body.style.backgroundColor = randomColorGenerator();
+          }, 1000);
+        }
+      });
+
+      // Stop Button Event Listener.
+      stop.addEventListener("click", function () {
+        clearInterval(intervalId);
+        intervalId = null;
+      });
+    </script>
+  </body>
+</html>

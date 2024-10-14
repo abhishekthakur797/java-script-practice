@@ -1,0 +1,50 @@
+<!--! VIDEO NO 38 : 2 projects with Async JS -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyboard Checker</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    </style>
+  </head>
+
+  <body style="background-color: black; color: white">
+    <h3 class="key">
+      Press any keyboard button to see ASCII value and key code.
+    </h3>
+
+    <div class="project">
+      <div class="insert" id="insert"></div>
+    </div>
+
+    <!--! script -->
+    <script>
+      const insert = document.getElementById("insert");
+      window.addEventListener("keydown", function (e) {
+        insert.innerHTML = `
+        <div class='color'>
+            <table border="1" cellspacing="0" cellpadding="10" style="text-align: center;">
+                <tr>
+                    <th>KEY</th>
+                    <th>ASCII VALUE</th>
+                    <th>KEY CODE</th>
+                    </tr>
+                 <tr>
+                    <td>${e.key === " " ? "Space" : e.key}</td>
+                    <td>${e.keyCode}</td>
+                    <td>${e.code}</td>
+                    </tr>
+                </table>
+            </div>
+        `;
+      });
+    </script>
+  </body>
+</html>

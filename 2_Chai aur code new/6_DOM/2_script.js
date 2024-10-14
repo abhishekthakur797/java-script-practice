@@ -2,14 +2,14 @@
 //! DOM is a based on tree structure.
 
 const parent = document.querySelector(".parent");
-console.log(parent); // <div class="parent">
-console.log(parent.children); // HTMLCollection { 0: div.day, 1: div.day, 2: div.day, 3: div.day, length: 4 }
-console.log(parent.children[1]); // <div class="day">
-console.log(parent.children[1].innerHTML); // Tuesday
+console.log("Parent Element:", parent); // <div class="parent">
+console.log("Children Element:", parent.children); // HTMLCollection { 0: div.day, 1: div.day, 2: div.day, 3: div.day, length: 4 }
+console.log("Children Element 1:", parent.children[1]); // <div class="day">
+console.log("Children Element 1 Inner HTML:", parent.children[1].innerHTML); // Tuesday
 
 // Loop for children element
 for (let i = 0; i < parent.children.length; i++) {
-  console.log(parent.children[i].innerHTML);
+  console.log(`Inner HTML of child ${[i]} : ${parent.children[i].innerHTML}`);
 }
 console.log("----------------");
 

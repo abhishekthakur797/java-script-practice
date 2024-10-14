@@ -1,0 +1,78 @@
+<!--! VIDEO NO 36 :: Events in Javascript  -->
+<!--! SIMPLE PROJECT WHEN WE CLICK ON IMAGES IT WILL REMOVE FROM PAGE -->
+<!--! remove function (addEventListener) -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events in JavaScript</title>
+    <style>
+      li {
+        list-style: none;
+      }
+      li img {
+        width: 200px;
+        height: 150px;
+        border-radius: 10px;
+        object-fit: cover;
+        object-position: center;
+      }
+    </style>
+  </head>
+
+  <body style="background-color: black; color: white">
+    <h2>Amazing Images</h2>
+    <div>
+      <ul id="images">
+        <li>
+          <img
+            id="cricket"
+            src="https://images.pexels.com/photos/3657154/pexels-photo-3657154.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="cricket"
+          />
+        </li>
+        <li>
+          <img
+            id="football"
+            src="https://images.pexels.com/photos/2209/people-men-grass-sport.jpg?auto=compress&cs=tinysrgb&w=600"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="https://images.pexels.com/photos/159607/basketball-player-girls-basketball-girl-159607.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt=""
+            id="basketball"
+          />
+        </li>
+        <li>
+          <img
+            src="https://images.pexels.com/photos/2260787/pexels-photo-2260787.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt=""
+            id="hockey"
+          />
+        </li>
+        <li>
+          <img
+            src="https://images.pexels.com/photos/5739119/pexels-photo-5739119.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt=""
+            id="tennis"
+          />
+        </li>
+      </ul>
+    </div>
+  </body>
+  <!--! Script-->
+  <script>
+    document.querySelector("#images").addEventListener("click", function (e) {
+      // console.log(e.target.parentNode);
+      // let removeIt = e.target.parentNode; // if you click on li it will remove all images images is inside li.
+      if (e.target.tagName === "IMG") {
+        let removeIt = e.target.parentNode;
+        removeIt.remove();
+      }
+    });
+  </script>
+</html>

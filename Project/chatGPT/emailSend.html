@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Send Email with Promise</title>
+    <script src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
+  </head>
+  <body>
+    <h1>Send Email Example</h1>
+    <button onclick="sendEmail()">Send Email</button>
+
+    <script>
+      // Initialize EmailJS with your user ID
+      emailjs.init("your_user_id");
+
+      function sendEmail() {
+        const params = {
+          from_name: "Abhishek",
+          to_name: "Recipient",
+          message: "Hello, this is a test email!",
+          reply_to: "abhishek@example.com",
+        };
+
+        // Sending the email and handling with .then()
+        emailjs
+          .send("your_service_id", "your_template_id", params)
+          .then((response) => {
+            console.log(
+              "Email sent successfully!",
+              response.status,
+              response.text
+            );
+          })
+          .catch((error) => {
+            console.error("Failed to send email", error);
+          });
+      }
+    </script>
+  </body>
+</html>

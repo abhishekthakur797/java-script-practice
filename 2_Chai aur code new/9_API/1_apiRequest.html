@@ -1,0 +1,97 @@
+<!-- ! VIDEO NO 39 : API request and V8 engine -->
+
+<!--! API Notes.
+
+-> An API (Application Programming Interface) is a set of rules and protocols
+that allows different software applications to communicate and exchange data with each other. 
+-> fetch is newly introduced in 2015 and added to browsers.
+-> In previous time we use XMLHttpRequest to call api.
+-> XMLHttpRequest is used heavily in AJAX(Asynchronous Javascript and XML) programming.
+-> XML :: Extensible Markup Language.
+
+-->
+
+<!--! Advance JS Notes.
+
+// The console is technically part of JavaScript but functions as a debugging tool provided by the browser.  
+// It is injected at runtime by the browser environment.  
+// The 'document' object is not a core part of JavaScript; it belongs to the browser's DOM API.  
+// JavaScript is executed by engines like V8, which are written in C++.  
+// JavaScript serves as a high-level wrapper over C++ in these engines.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>APIs</title>
+    <style>
+      td,
+      tr {
+        background-color: green;
+        padding: 3px 5px;
+      }
+    </style>
+  </head>
+  <body style="background-color: black; color: white">
+    <table style="border: 1px solid red; text-align: center; padding: 5px">
+      <tr>
+        <th>value</th>
+        <th>state</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>0</td>
+        <td>UNSENT</td>
+        <td>Client has been created. open() not called yet.</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>OPENED</td>
+        <td>open() has been called.</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>HEADERS_RECEIVED</td>
+        <td>send() has been called, and headers and status are available.</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>LOADING</td>
+        <td>Downloading; responseText holds partial data.</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>DONE</td>
+        <td>Downloading; responseText holds partial data.</td>
+      </tr>
+    </table>
+    <script>
+      const requestUrl = "https://api.github.com/users/abhishekthakur797";
+      const xhr = new XMLHttpRequest();
+      xhr.open("GET", requestUrl);
+
+      // console.log(xhr.readyState); // it will check in which state you are.
+
+      // for continuous tracking in which state are you.
+      xhr.onreadystatechange = function () {
+        console.log(xhr.readyState); // logs the current state
+        // State detect.
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          const data = this.responseText; // Logs API response
+          console.log(data);
+          console.log(typeof data);
+          console.log(data.followers); // data comes in string, we have to convert it into JSON.
+          const dataJSON = JSON.parse(this.responseText); // String to object(JSON values)
+          console.log(typeof dataJSON); // now it is converted into object.
+          console.log("No of followers on github", dataJSON.followers);
+        } else if (xhr.readyState === 4) {
+          console.error("Error:" + xhr.status); // Logs any error
+        }
+      };
+      xhr.send();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!--! VIDEO NO 38 : 2 projects with Async JS -->
+<!--! setInterval and clearInterval -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Javascript</title>
+  </head>
+  <body style="background-color: black; color: white">
+    <h1 style="background-color: #f7e018; color: black; padding: 5px">
+      Welcome to Javascript
+    </h1>
+
+    <!--! script -->
+    <script>
+      // crating a function where it executes name date and time.
+      const sayTime = function (str) {
+        console.log(str, Date.now(), readableDate);
+      };
+
+      // setInterval - setting interval it will execute the code after 1 second.
+      const IntervalId = setInterval(sayTime, 1000, "Abhishek");
+
+      // clearInterval - it stops the setInterval
+      clearInterval(IntervalId);
+    </script>
+  </body>
+</html>

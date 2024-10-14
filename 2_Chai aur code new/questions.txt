@@ -1,5 +1,9 @@
 -> why null type is defined as object?
 -> Javascript is dynamically typed statically type language?
+
+-> Revise all theoretical video and make notes.
+
 -> Video no 25 later video : how does Javascript execute code.
 -> Video no 30 later : filter map and reduce.
 -> Video no 34 : Re-watch the video
+-> Video no 37 : Async Javascript fundamentals

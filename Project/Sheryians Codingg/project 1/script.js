@@ -14,6 +14,6 @@ button.addEventListener("click", function () {
     button.style.backgroundColor = "green";
     buttonClick == true;
   }
-  // Toggle the state
-  //buttonClick = !buttonClick;
+  //Toggle the state
+  buttonClick = !buttonClick;
 });

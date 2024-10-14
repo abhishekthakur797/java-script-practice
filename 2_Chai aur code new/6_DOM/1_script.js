@@ -14,13 +14,15 @@ const heading = document.getElementById("heading");
 heading.style.backgroundColor = "grey";
 heading.style.padding = "5px";
 
-// We can retrieve the value in 3 ways:
-console.log(heading.innerHTML); // Retrieves the content, including HTML tags and child elements.
-console.log(heading.innerText); // Retrieves only the visible text, excluding any hidden elements.
-console.log(heading.textContent); // Retrieves all text, including hidden elements, but without HTML tags.
+// We can retrieve the value in 3 ways.
+console.log("Inner HTML:", heading.innerHTML); // Retrieves the content, including HTML tags and child elements.
+console.log("Inner Text:", heading.innerText); // Retrieves only the visible text, excluding any hidden elements.
+console.log("Inner Content:", heading.textContent); // Retrieves all text, including hidden elements, but without HTML tags.
 
-document.querySelector("h1"); // select first tag.
-document.querySelector("#heading");
+document.querySelector("h1"); // tag selection-select first tag.
+document.querySelector("#heading"); // id selection
+document.querySelector(".heading"); // class selection
+
 document.querySelector('input[type="password"]');
 
 const MyUnorderedList = document.querySelector("li");

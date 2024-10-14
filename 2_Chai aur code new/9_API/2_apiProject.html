@@ -1,0 +1,49 @@
+<!-- ! VIDEO NO 39 : API request and V8 engine -->
+<!--! Print your profile picture name following and followers from api data -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API PROJECT 1</title>
+    <style>
+      img {
+        width: 200px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body style="background-color: black; color: white">
+    <div id="card">
+      <img src="" alt="" id="card-pic" />
+      <div id="card-name"></div>
+      <div id="card-username"></div>
+    </div>
+
+    <!--! script  -->
+    <script>
+      const profilePic = document.querySelector("#card-pic");
+      const profileName = document.querySelector("#card-name");
+      const otherData = document.querySelector("#card-username");
+
+      const url = "https://api.github.com/users/abhishekthakur797";
+      const xhr = new XMLHttpRequest();
+      xhr.open("GET", url);
+
+      xhr.onreadystatechange = function () {
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          const data = JSON.parse(this.responseText); // converts string to object.
+          console.log(data);
+
+          profilePic.src = data.avatar_url;
+          profileName.innerHTML = `Name: ${data.name}`;
+          otherData.innerHTML = `username: ${data.login}`;
+        }
+      };
+      xhr.send();
+    </script>
+  </body>
+</html>

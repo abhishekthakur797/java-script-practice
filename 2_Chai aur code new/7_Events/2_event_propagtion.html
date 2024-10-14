@@ -1,0 +1,92 @@
+<!--! VIDEO NO 36 :: Events in Javascript  -->
+<!--! Event Propagation(addEventListener) -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events in JavaScript</title>
+    <style>
+      li {
+        list-style: none;
+      }
+
+      li img {
+        width: 200px;
+        height: 150px;
+        border-radius: 10px;
+        object-fit: cover;
+        object-position: center;
+      }
+    </style>
+  </head>
+
+  <body style="background-color: black; color: white">
+    <h2>Amazing Images</h2>
+    <div>
+      <ul id="images">
+        <li>
+          <img
+            id="cricket"
+            src="https://images.pexels.com/photos/3657154/pexels-photo-3657154.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="cricket"
+          />
+        </li>
+        <li>
+          <img
+            src="https://images.pexels.com/photos/2260787/pexels-photo-2260787.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt=""
+            id="hockey"
+          />
+        </li>
+        <li>
+          <img
+            src="https://images.pexels.com/photos/5739119/pexels-photo-5739119.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt=""
+            id="tennis"
+          />
+        </li>
+        <li>
+          <a href="google.com" id="google" style="color: white">google</a>
+        </li>
+      </ul>
+    </div>
+  </body>
+  <!--! Script-->
+  <script>
+    // Event Propagation :: bubbling or capturing.
+    // syntax :: document.getElementById("images").addEventListener('click',function(){},true/false)
+    document.getElementById("images").addEventListener(
+      "click",
+      function (e) {
+        console.log("You clicked in the ul");
+      },
+      true
+    );
+
+    // if you clicked the tennis it will first show child element than parent element.
+    // but if you add true it will act opposite.
+
+    document.getElementById("tennis").addEventListener(
+      "click",
+      function (e) {
+        console.log("You clicked tennis");
+      },
+      true
+    );
+
+    // adding two function :: it will show first clicked parent element than child element.
+    // stopPropagation :: Stops the event from propagating (bubbling or capturing) to parent elements.
+    // preventDefault :: Prevents the default action of an event from happening.
+    document.getElementById("google").addEventListener(
+      "click",
+      function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log("You Clicked google");
+      },
+      false
+    );
+  </script>
+</html>
