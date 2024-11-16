@@ -1,7 +1,0 @@
--> Create an HTML and JavaScript code when ever user clicks mouse on browser it creates a circle, 
-   after 2 second it disappears(from video no 36 and time 14:00)
-   
--> When user click on image of browser it takes record of time when and how many times user click 
-   in which element.(from video no 36 and time 14:00)
-
--> Crate a JavaScript code where email is sent by using promise and .then function (Video No 40 and time 20:00)
