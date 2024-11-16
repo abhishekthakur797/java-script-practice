@@ -8,6 +8,7 @@
 
 // Javascript run synchronous code first like console.log, function, loops, dialog etc.
 // after that asynchronous code run executes like promise, setTimeout, fetch, async, eventListener, FileReader etc.
+// first it will execute fetch then it will implement promise setTimeout (see diagram video no: 37)
 
 // We can also direct create variable (new Promise(function(resolve,reject){})) without storing in the variable.
 const promiseOne = new Promise(function (resolve, reject) {
@@ -102,17 +103,3 @@ async function consumePromiseFive() {
   }
 }
 consumePromiseFive();
-
-// getting data from api.
-async function getUserData() {
-  try {
-    const response = await fetch(
-      "https://api.github.com/users/abhishekthakur797"
-    );
-    // some time conversion also take time thats why we use await here
-    const data = await response.json();
-  } catch (error) {
-    console.log("Error:", error);
-  }
-}
-getUserData();
